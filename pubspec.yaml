@@ -61,7 +61,10 @@ dependencies:
   # WEB TOOLS
   webview_flutter: ^2.0.8
   responsive_framework: ^0.1.4
-
+  rive: ^0.7.33
+  firebase_core: ^1.8.0
+  firebase_auth: ^3.1.4
+  cloud_firestore: ^2.5.0
   #clustering_google_maps: ^0.1.2
   #image_picker_gallery_camera: 0.1.6
 
