@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
             ? AppThemeData.lightTheme
             : AppThemeData.darkTheme,
         routes: {
+          // '/': (context) => LearnerWalkThrough(),
           '/alfatihah': (context) => const AlFatihahScreen(),
         },
         localeResolutionCallback: (locale, supportedLocales) => locale,

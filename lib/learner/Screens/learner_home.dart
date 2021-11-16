@@ -101,11 +101,11 @@ class LearnerFeatured extends StatelessWidget {
     return Container(
       width: 250,
       margin: const EdgeInsets.only(left: 16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          GestureDetector(
-            child: ClipRRect(
+      child: GestureDetector(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            ClipRRect(
               borderRadius: BorderRadius.circular(8.0),
               child: Image.asset(
                 model.img,
@@ -114,22 +114,22 @@ class LearnerFeatured extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
               ),
             ),
-            onTap: ()=> Navigator.pushNamed(context , model.path),
-          ),
-          const SizedBox(height: 4),
-          Padding(
-            padding: const EdgeInsets.only(left: 4, right: 4),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                text(model.name,
-                    fontFamily: fontMedium, isLongText: false, maxLine: 2),
-                text(model.price, textColor: learner_textColorSecondary),
-              ],
-            ),
-          )
-        ],
+            const SizedBox(height: 4),
+            Padding(
+              padding: const EdgeInsets.only(left: 4, right: 4),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  text(model.name,
+                      fontFamily: fontMedium, isLongText: false, maxLine: 2),
+                  text(model.price, textColor: learner_textColorSecondary),
+                ],
+              ),
+            )
+          ],
+        ),
+        onTap: () => Navigator.pushNamed(context, model.path),
       ),
     );
   }
