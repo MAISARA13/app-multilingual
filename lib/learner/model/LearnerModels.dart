@@ -15,6 +15,7 @@ class LearnerFeaturedModel {
   var price = "";
   var strikePrice = "";
   var type;
+  var path;
 }
 
 class LearnerPeopleModel {

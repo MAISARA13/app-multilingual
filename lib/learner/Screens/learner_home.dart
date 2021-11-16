@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:learningapp/learner/model/LearnerModels.dart';
 import 'package:learningapp/learner/utils/LearnerColors.dart';
@@ -79,7 +78,10 @@ class _LearnerHomeState extends State<LearnerHome> {
               return LearnerCategory(mList2[index], index);
             },
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3, childAspectRatio: 2, mainAxisExtent: 210,),
+              crossAxisCount: 3,
+              childAspectRatio: 2,
+              mainAxisExtent: 210,
+            ),
           ),
           const SizedBox(height: 5),
         ],
@@ -102,14 +104,17 @@ class LearnerFeatured extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          ClipRRect(
-            borderRadius: BorderRadius.circular(8.0),
-            child: Image.asset(
-              model.img,
-              fit: BoxFit.cover,
-              height: 300,
-              width: MediaQuery.of(context).size.width,
+          GestureDetector(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(8.0),
+              child: Image.asset(
+                model.img,
+                fit: BoxFit.cover,
+                height: 300,
+                width: MediaQuery.of(context).size.width,
+              ),
             ),
+            onTap: ()=> Navigator.pushNamed(context , model.path),
           ),
           const SizedBox(height: 4),
           Padding(

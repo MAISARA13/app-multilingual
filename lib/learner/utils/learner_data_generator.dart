@@ -1,3 +1,6 @@
+
+
+import 'package:learningapp/learner/Screens/al_fatihah/alfatihah.home.screen.dart';
 import 'package:learningapp/learner/model/LearnerModels.dart';
 import 'package:learningapp/learner/utils/LearnerColors.dart';
 import 'package:learningapp/learner/utils/learner_images.dart';
@@ -69,11 +72,13 @@ List<LearnerCategoryModel> learnerGetCategories() {
 
 List<LearnerFeaturedModel> learnerGetFavourites() {
   List<LearnerFeaturedModel> list = [];
+
   LearnerFeaturedModel featured = LearnerFeaturedModel();
   featured.img = learner_ic_alfatihah;
   featured.name = "Al-Fatihah";
   featured.price = "Free";
   featured.type = "Surah";
+  featured.path = '/alfatihah';
 
   LearnerFeaturedModel featured2 = LearnerFeaturedModel();
   featured2.img = learner_ic_comingsoon;
