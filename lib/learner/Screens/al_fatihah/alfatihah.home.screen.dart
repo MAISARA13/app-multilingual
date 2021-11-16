@@ -19,7 +19,7 @@ class _AlFatihahScreenState extends State<AlFatihahScreen> {
         Expanded(
           child: Container(
             margin: const EdgeInsets.only(left: 16),
-            child: text("Al fatihah",
+            child: text("Al-Fatihah",
                 fontFamily: fontBold,
                 fontSize: textSizeNormal,
                 textColor: learner_textColorPrimary),
