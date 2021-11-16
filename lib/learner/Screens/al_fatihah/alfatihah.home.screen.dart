@@ -53,7 +53,9 @@ class _AlFatihahScreenState extends State<AlFatihahScreen> {
                 width: 300,
                 height: 70,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/comic');
+                    },
                     child: Row(
                       children: const [
                         Text("Lets learn using Comics"),

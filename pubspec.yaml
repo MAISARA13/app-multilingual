@@ -38,6 +38,7 @@ dependencies:
   mobx: ^2.0.3
   flutter_mobx: ^2.0.1
   nb_utils: ^4.4.8
+  delayed_display: ^2.0.0
 
   # Base
   flutter_vector_icons: ^1.0.0
@@ -61,7 +62,12 @@ dependencies:
   # WEB TOOLS
   webview_flutter: ^2.0.8
   responsive_framework: ^0.1.4
-
+  rive: ^0.7.33
+  firebase_core: ^1.8.0
+  firebase_storage:
+  firebase_auth: ^3.1.4
+  cloud_firestore: ^2.5.0
+  provider:
   #clustering_google_maps: ^0.1.2
   #image_picker_gallery_camera: 0.1.6
 
@@ -100,3 +106,5 @@ flutter:
     - images/learnerimage/learner_walk_1.png
     - assets/images/LikeButton/
     - images/ic_comingsoon.png
+    - assets/rives/chars/Teacher.riv
+    - assets/rives/chars/Chef.riv
