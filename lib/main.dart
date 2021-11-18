@@ -1,10 +1,9 @@
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:learningapp/learner/Screens/learner_walk_through.dart';
-import 'package:provider/provider.dart';
 
-import 'Services/Firebase.comic.dart';
 import 'learner/Screens/al_fatihah/alfatihah.comic.screen.dart';
 import 'learner/Screens/al_fatihah/alfatihah.home.screen.dart';
 import 'main/store/AppStore.dart';
@@ -23,22 +22,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [Provider(create: (_) => alFatihahStreakStream)],
-      child: Observer(
-        builder: (_) => MaterialApp(
-          debugShowCheckedModeBanner: false,
-          theme: !appStore.isDarkModeOn
-              ? AppThemeData.lightTheme
-              : AppThemeData.darkTheme,
-          routes: {
-            '/': (context) => LearnerWalkThrough(),
-            '/alfatihah': (context) => const AlFatihahScreen(),
-            '/comic': (context) => const PlayPauseAnimation(),
-          },
-          localeResolutionCallback: (locale, supportedLocales) => locale,
-          locale: Locale(appStore.selectedLanguageCode),
-        ),
+    return Observer(
+      builder: (_) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: LearnerWalkThrough(),
+        theme: !appStore.isDarkModeOn
+            ? AppThemeData.lightTheme
+            : AppThemeData.darkTheme,
+        routes: {
+          // '/': (context) => LearnerWalkThrough(),
+          '/alfatihah': (context) => const AlFatihahScreen(),
+          '/comic': (context) => const PlayPauseAnimation(),
+        },
+        localeResolutionCallback: (locale, supportedLocales) => locale,
+        locale: Locale(appStore.selectedLanguageCode),
       ),
     );
   }

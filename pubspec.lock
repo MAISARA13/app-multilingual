@@ -267,13 +267,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.5.6"
-  delayed_display:
-    dependency: "direct main"
-    description:
-      name: delayed_display
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.0"
   fake_async:
     dependency: transitive
     description:
@@ -337,27 +330,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0"
-  firebase_storage:
-    dependency: "direct main"
-    description:
-      name: firebase_storage
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "10.1.0"
-  firebase_storage_platform_interface:
-    dependency: transitive
-    description:
-      name: firebase_storage_platform_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.0.6"
-  firebase_storage_web:
-    dependency: transitive
-    description:
-      name: firebase_storage_web
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.1.0"
   fixnum:
     dependency: transitive
     description:
@@ -583,13 +555,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.4.10"
-  nested:
-    dependency: transitive
-    description:
-      name: nested
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.0"
   nm:
     dependency: transitive
     description:
@@ -716,13 +681,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.4"
-  provider:
-    dependency: "direct main"
-    description:
-      name: provider
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "6.0.1"
   pub_semver:
     dependency: transitive
     description:
