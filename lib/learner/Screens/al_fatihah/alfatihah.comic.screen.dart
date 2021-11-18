@@ -1,14 +1,12 @@
 /// Demonstrates playing a one-shot animation on demand
 
 import 'package:delayed_display/delayed_display.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:learningapp/Services/Firebase.comic.dart';
 import 'package:learningapp/learner/model/Comic.models.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:rive/rive.dart';
-import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 
 class PlayPauseAnimation extends StatefulWidget {
   const PlayPauseAnimation({Key? key}) : super(key: key);
@@ -139,7 +137,7 @@ class _PlayPauseAnimationState extends State<PlayPauseAnimation> {
                       ),
                     ),
                     Expanded(
-                      child: Container(
+                      child: SizedBox(
                         width: 300,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
