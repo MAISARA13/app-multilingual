@@ -24,8 +24,6 @@ class _PlayPauseAnimationState extends State<PlayPauseAnimation> {
   late RiveAnimationController _controller;
 
   // Toggles between play and pause animation states
-  void _togglePlay() =>
-      setState(() => _controller.isActive = !_controller.isActive);
 
   /// Tracks if the animation is playing by whether controller is running
   bool get isPlaying => _controller.isActive;
@@ -94,7 +92,7 @@ class _PlayPauseAnimationState extends State<PlayPauseAnimation> {
                                 child: Container(
                               width: 500,
                               padding:
-                              const EdgeInsets.only(top: 160.0, left: 180),
+                                  const EdgeInsets.only(top: 160.0, left: 180),
                               alignment: Alignment.topCenter,
                               child: Text(
                                 titles[pageChanged],
@@ -109,7 +107,7 @@ class _PlayPauseAnimationState extends State<PlayPauseAnimation> {
                                 child: Container(
                               width: 500,
                               padding:
-                              const EdgeInsets.only(top: 160.0, left: 180),
+                                  const EdgeInsets.only(top: 160.0, left: 180),
                               alignment: Alignment.topCenter,
                               child: Text(
                                 titles[pageChanged],
@@ -138,7 +136,7 @@ class _PlayPauseAnimationState extends State<PlayPauseAnimation> {
                     ),
                     Expanded(
                       child: SizedBox(
-                        width: 300,
+                        width: 500,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -148,11 +146,18 @@ class _PlayPauseAnimationState extends State<PlayPauseAnimation> {
                                   pageChanged = pageChanged - 1;
 
                                   pageController.animateToPage(pageChanged,
-                                      duration: const Duration(milliseconds: 500),
+                                      duration:
+                                          const Duration(milliseconds: 500),
                                       curve: Curves.easeInOut);
                                 },
-                                child: const Icon(Icons.arrow_back,
-                                    color: Color(0xff430444), size: 50),
+                                child: Row(
+                                  children: const [
+                                    Icon(Icons.arrow_back_ios_outlined,
+                                        size: 40),
+                                    Text('Back',
+                                        style: TextStyle(fontSize: 30)),
+                                  ],
+                                ),
                               ),
                             const Spacer(),
                             if (pageChanged != 3)
@@ -168,8 +173,14 @@ class _PlayPauseAnimationState extends State<PlayPauseAnimation> {
                                         curve: Curves.linearToEaseOut);
                                   }
                                 },
-                                child: const Icon(Icons.arrow_forward,
-                                    color: Color(0xff430444), size: 50),
+                                child: Row(
+                                  children: const [
+                                    Text('Next',
+                                        style: TextStyle(fontSize: 30)),
+                                    Icon(Icons.arrow_forward_ios_outlined,
+                                        size: 40),
+                                  ],
+                                ),
                               ),
                           ],
                         ),
